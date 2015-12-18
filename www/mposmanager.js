@@ -44,31 +44,31 @@ function convertToNativeJS(object) {
 module.exports = {
 
     open: function (success, failure) {
-        cordova.exec(success, failure, 'MPosManager', 'open', []);
+        cordova.exec(success, failure, 'MposManager', 'open', []);
     },
 
     close: function (success, failure) {
-        cordova.exec(success, failure, 'MPosManager', 'close', []);
+        cordova.exec(success, failure, 'MposManager', 'close', []);
     },
 
     startScan: function (seconds, success, failure) {
-        cordova.exec(success, failure, 'MPosManager', 'startScan', [seconds]);
+        cordova.exec(success, failure, 'MposManager', 'startScan', [seconds]);
     },
 
     stopScan: function (success, failure) {
-        cordova.exec(success, failure, 'MPosManager', 'stopScan', []);
+        cordova.exec(success, failure, 'MposManager', 'stopScan', []);
     },
 
     connect: function (device_id, success, failure) {
-        cordova.exec(success, failure, 'MPosManager', 'connect', [device_id]);
+        cordova.exec(success, failure, 'MposManager', 'connect', [device_id]);
     },
 
     disconnect: function (success, failure) {
-        cordova.exec(success, failure, 'MPosManager', 'disconnect', []);
+        cordova.exec(success, failure, 'MposManager', 'disconnect', []);
     },
 
     getDeviceState: function (success, failure) {
-        cordova.exec(success, failure, 'MPosManager', 'getDeviceState', []);
+        cordova.exec(success, failure, 'MposManager', 'getDeviceState', []);
     }
-    
+
 };

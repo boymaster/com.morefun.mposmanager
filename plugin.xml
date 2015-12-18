@@ -18,7 +18,7 @@
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="MPosManager">
+            <feature name="MposManager">
                 <param name="ios-package" value="MposManager" onload="true" />
             </feature>
         </config-file>
@@ -30,7 +30,7 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="MPosManager">
+            <feature name="MposManager">
               <param name="android-package" value="com.morefun.cordova.MposManager" />
               <param name="onload" value="true" />
             </feature>
