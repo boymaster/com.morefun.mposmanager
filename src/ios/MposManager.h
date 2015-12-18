@@ -20,8 +20,17 @@
 #define MposManager_h
 
 #import <Cordova/CDV.h>
+#import "../../SDK/MPosController.h"
 
-@interface MposManager : CDVPlugin 
+@interface MposManager : CDVPlugin <MPosDelegate> {
+    NSString* discoverPeripherialCallbackId;
+    NSString* posCallbackId;
+    
+    NSInteger amountFen;
+    MFEU_MSR_EMV_PIN emvPinReq;
+}
+
+@property (strong, nonatomic) MPosController *posCtrl;
 
 /// 连接音频刷卡器
 - (void)open: (CDVInvokedUrlCommand *)command;
@@ -39,6 +48,12 @@
 
 /// 获取连接状态
 - (void)getDeviceState:(CDVInvokedUrlCommand *)command;
+
+//////////////////////////////////////////////////////////////////////
+
+-(void) readPosInfo: (CDVInvokedUrlCommand *)command;
+
+-(void) cardRead: (CDVInvokedUrlCommand *)command;
 
 @end
 

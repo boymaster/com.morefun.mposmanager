@@ -1,4 +1,4 @@
-/**
+cordova.define("com.morefun.mposmanager.mposmanager", function(require, exports, module) { /**
  * cordova is available under *either* the terms of the modified BSD license *or* the
  * MIT License (2008). See http://opensource.org/licenses/alphabetical for full text.
  *
@@ -69,6 +69,16 @@ module.exports = {
 
     getDeviceState: function (success, failure) {
         cordova.exec(success, failure, 'MposManager', 'getDeviceState', []);
-    }
+    },
+               
+    ///////////////////////////////////////////////////////////////////////////
+    readPosInfo: function (success, failure) {
+        cordova.exec(success, failure, 'MposManager', 'readPosInfo', []);       
+    },
+               
+    cardRead: function (msg, amount, seconds, success, failure) {
+        cordova.exec(success, failure, 'MposManager', 'cardRead', [msg, amount, seconds]);
+    },
 
 };
+});
