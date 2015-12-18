@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.morefun.mposmanager"
+    version="1.0.0">
+    <name>mposmanager</name>
+    <description>MoreFun MPos Manager (Ionic Plugin)</description>
+    <license>Apache 2.0</license>
+    <keywords>Ionic,mpos manager</keywords>
+    <repo>https://github.com/boymaster/com.morefun.mposmanager.git</repo>
+    <issue>https://github.com/boymaster/com.morefun.mposmanager/issues</issue>
+    
+    <js-module src="www/mposmanager.js" name="mposmanager">
+        <runs/>
+        <clobbers target="mposmanager" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="MPosManager">
+                <param name="ios-package" value="MposManager" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/MposManager.h" />
+        <source-file src="src/ios/MposManager.m" />
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MPosManager">
+              <param name="android-package" value="com.morefun.cordova.MposManager" />
+              <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/com/morefun/cordova/MposManager.java" target-dir="src/com/morefun/cordova" />
+    </platform>
+
+</plugin>
