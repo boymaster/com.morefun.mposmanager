@@ -20,7 +20,7 @@
 #define MposManager_h
 
 #import <Cordova/CDV.h>
-#import "../../SDK/MPosController.h"
+#import "SDK/MPosController.h"
 
 @interface MposManager : CDVPlugin <MPosDelegate> {
     NSString* discoverPeripherialCallbackId;
